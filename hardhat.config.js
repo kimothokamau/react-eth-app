@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 
-const PRIV_KEY = '25d981e74eecc77f785c062d2e5a5307c1bae82291de4a3f33ba5634937c07b2'
+const PRIV_KEY = '42c0b6182b3fffd830040e2ab01219bc8722a61cc19f85c7cec4aba16bce1c20'
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
