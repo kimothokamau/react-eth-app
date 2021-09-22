@@ -13,11 +13,23 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
+  const [deployer] = await hre.ethers.getSigners();
+
+  console.log(
+    "Deploying contracts with the account:",
+    deployer.address
+  );
+
+  const Token = await hre.ethers.getContractFactory("Token");
+  const token = await Token.deploy(); 
+
+
   // We get the contract to deploy
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, Hardhat!");
 
   await greeter.deployed();
+  await token.deployed();
 
   console.log("Greeter deployed to:", greeter.address);
 }
